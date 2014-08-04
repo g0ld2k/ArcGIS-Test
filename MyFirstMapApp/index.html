@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+                <title></title>
+                <link rel="stylesheet" href="http://js.arcgis.com/3.10/js/esri/css/esri.css">
+                    <script src="http://js.arcgis.com/3.10/"></script>
+                    <script>
+                        require(["esri/map"], function(Map) { ... });
+                    </script>
+                    <script>
+                        require(["esri/map", "dojo/domReady!"], function(Map) {
+                                var map;
+                                require(["esri/map", "dojo/domReady!"], function(Map) {
+                                    map = new Map("mapDiv", {
+                                      center: [-56.049, 38.485],
+                                      zoom: 3,
+                                      basemap: "topo"
+                                      });
+                                    });
+                                });
+                    </script>
+    </head>
+    <body class="claro">
+        <div id="mapDiv"></div>
+    </body>
+    <style>
+        html, body, #mapDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+    </style>
+    
+</html>
