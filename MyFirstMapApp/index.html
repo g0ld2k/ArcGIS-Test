@@ -2,35 +2,122 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-            <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-                <title></title>
-                <link rel="stylesheet" href="http://js.arcgis.com/3.10/js/esri/css/esri.css">
-                    <script src="http://js.arcgis.com/3.10/"></script>
-                    <script>
-                        require(["esri/map"], function(Map) { ... });
-                    </script>
-                    <script>
-                        require(["esri/map", "dojo/domReady!"], function(Map) {
-                                var map;
-                                require(["esri/map", "dojo/domReady!"], function(Map) {
-                                    map = new Map("mapDiv", {
-                                      center: [-56.049, 38.485],
-                                      zoom: 3,
-                                      basemap: "topo"
-                                      });
-                                    });
-                                });
-                    </script>
-    </head>
-    <body class="claro">
-        <div id="mapDiv"></div>
+            <meta name="viewport" content="width=device-width,user-scalable=no">
+                <!--The viewport meta tag is used to improve the presentation and behavior of the samples
+                 on iOS devices-->
+                <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+                    <title>Maps Toolbar</title>
+                    
+                    <link rel="stylesheet" href="http://js.arcgis.com/3.10/js/dojo/dijit/themes/nihilo/nihilo.css">
+                        <link rel="stylesheet" href="http://js.arcgis.com/3.10/js/esri/css/esri.css">
+                            <style>
+                                html, body {
+                                    font-family: sans-serif;
+                                    height: 100%;
+                                    width: 100%;
+                                    background-color: #fff;
+                                }
+                            html, body {
+                                margin: 0;
+                                padding: 0;
+                            }
+                            #map{
+                              top:0px;
+                              height: 100%;
+                              width: 100%;
+                            }
+                            #mainWindow{
+                              top: 0px;
+                              font-family: sans-serif;
+                              height: 100%;
+                              width: 100%;
+                            }
+
+
+                            </style>
+                            
+                            <script src="http://js.arcgis.com/3.10/"></script>
+                            <script>
+                                var map, toolbar, symbol, geomTask;
+                                
+                                require([
+                                         "esri/map",
+                                         "esri/toolbars/draw",
+                                         "esri/graphic",
+                                         
+                                         "esri/symbols/SimpleMarkerSymbol",
+                                         "esri/symbols/SimpleLineSymbol",
+                                         "esri/symbols/SimpleFillSymbol",
+                                         
+                                         "dojo/parser", "dijit/registry",
+                                         
+                                         "dijit/layout/BorderContainer", "dijit/layout/ContentPane",
+                                         "dijit/form/Button", "dijit/WidgetSet", "dojo/domReady!"
+                                         ], function(
+                                                     Map, Draw, Graphic,
+                                                     SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol,
+                                                     parser, registry
+                                                     ) {
+                                        parser.parse();
+                                        
+                                        map = new Map("map", {
+                                                      basemap: "streets",
+                                                      center: [-76.05918377637863, 36.78989060585892],
+                                                      zoom: 10
+                                                      });
+                                        
+                                        map.on("load", createToolbar);
+                                        
+                                        // loop through all dijits, connect onClick event
+                                        // listeners for buttons to activate drawing tools
+                                        registry.forEach(function(d) {
+                                                         // d is a reference to a dijit
+                                                         // could be a layout container or a button
+                                                         if ( d.declaredClass === "dijit.form.Button" ) {
+                                                         d.on("click", activateTool);
+                                                         }
+                                                         });
+                                        
+                                        function activateTool() {
+                                        var foo = "Polygon";
+                                        var tool = foo.toUpperCase().replace(/ /g, "_");
+                                        toolbar.activate(Draw[tool]);
+                                        map.hideZoomSlider();
+                                        }
+                                        
+                                        function createToolbar(themap) {
+                                        toolbar = new Draw(map);
+                                        toolbar.on("draw-end", addToMap);
+                                        activateTool();
+                                        }
+                                        
+                                        function addToMap(evt) {
+                                        //var symbol;
+                                        //toolbar.deactivate();
+                                        //map.showZoomSlider();
+                                        switch (evt.geometry.type) {
+                                        case "point":
+                                        case "multipoint":
+                                        symbol = new SimpleMarkerSymbol();
+                                        break;
+                                        case "polyline":
+                                        symbol = new SimpleLineSymbol();
+                                        break;
+                                        default:
+                                        symbol = new SimpleFillSymbol();
+                                        break;
+                                        }
+                                        var graphic = new Graphic(evt.geometry, symbol);
+                                        map.graphics.add(graphic);
+                                        }
+                                        });
+                                </script>
+                            </head>
+    <body>
+        
+
+            <div id="map"></div>
+
+        
     </body>
-    <style>
-        html, body, #mapDiv {
-            padding: 0;
-            margin: 0;
-            height: 100%;
-        }
-    </style>
-    
 </html>
