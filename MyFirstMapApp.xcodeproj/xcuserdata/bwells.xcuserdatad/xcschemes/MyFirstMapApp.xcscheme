@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2C79F734198EE5DC0089746C"
-               BuildableName = "ArcGIS SDK Test.app"
-               BlueprintName = "ArcGIS SDK Test"
-               ReferencedContainer = "container:ArcGIS SDK Test.xcodeproj">
+               BuildableName = "MyFirstMapApp.app"
+               BlueprintName = "MyFirstMapApp"
+               ReferencedContainer = "container:MyFirstMapApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2C79F758198EE5DC0089746C"
-               BuildableName = "ArcGIS SDK TestTests.xctest"
-               BlueprintName = "ArcGIS SDK TestTests"
-               ReferencedContainer = "container:ArcGIS SDK Test.xcodeproj">
+               BuildableName = "MyFirstMapAppTests.xctest"
+               BlueprintName = "MyFirstMapAppTests"
+               ReferencedContainer = "container:MyFirstMapApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C79F734198EE5DC0089746C"
-            BuildableName = "ArcGIS SDK Test.app"
-            BlueprintName = "ArcGIS SDK Test"
-            ReferencedContainer = "container:ArcGIS SDK Test.xcodeproj">
+            BuildableName = "MyFirstMapApp.app"
+            BlueprintName = "MyFirstMapApp"
+            ReferencedContainer = "container:MyFirstMapApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C79F734198EE5DC0089746C"
-            BuildableName = "ArcGIS SDK Test.app"
-            BlueprintName = "ArcGIS SDK Test"
-            ReferencedContainer = "container:ArcGIS SDK Test.xcodeproj">
+            BuildableName = "MyFirstMapApp.app"
+            BlueprintName = "MyFirstMapApp"
+            ReferencedContainer = "container:MyFirstMapApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C79F734198EE5DC0089746C"
-            BuildableName = "ArcGIS SDK Test.app"
-            BlueprintName = "ArcGIS SDK Test"
-            ReferencedContainer = "container:ArcGIS SDK Test.xcodeproj">
+            BuildableName = "MyFirstMapApp.app"
+            BlueprintName = "MyFirstMapApp"
+            ReferencedContainer = "container:MyFirstMapApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
