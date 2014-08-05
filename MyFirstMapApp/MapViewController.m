@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 City of Virginia Beach. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MapViewController.h"
 
-@interface ViewController ()
+@interface MapViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MapViewController
 
 - (void)viewDidLoad
 {
@@ -56,7 +56,7 @@
     [self.mapView addMapLayer:self.sketchLayer withName:@"Sketch layer"];
     self.mapView.touchDelegate = self.sketchLayer;
     
-    self.sketchLayer.geometry = [[AGSMutablePolygon alloc] initWithSpatialReference:self.mapView.spatialReference];
+    self.sketchLayer.geometry = [[AGSMutablePolyline alloc] initWithSpatialReference:self.mapView.spatialReference];
 }
 
 - (void)respondToGeomChanged:(NSNotification*)notification {
@@ -120,6 +120,7 @@
 //    self.userInstructions.text = [NSString stringWithFormat:@"%@", [formatter stringFromNumber:[NSNumber numberWithDouble:self.distance]]];
 //    [self.selectUnitButton setTitle:distanceUnitString forState:UIControlStateNormal];
     self.title = [NSString stringWithFormat:@"%@ %@", [formatter stringFromNumber:[NSNumber numberWithDouble:self.distance]], distanceUnitString];
+    self.areaName = [NSString stringWithFormat:@"%@ %@", [formatter stringFromNumber:[NSNumber numberWithDouble:self.distance]], distanceUnitString];
 
     
 }
@@ -161,7 +162,18 @@
 //    self.userInstructions.text = [NSString stringWithFormat:@"%@", [formatter stringFromNumber:[NSNumber numberWithDouble:self.area]]];
 //    [self.selectUnitButton setTitle:areaUnitString forState:UIControlStateNormal];
     self.title = [NSString stringWithFormat:@"%@ %@", [formatter stringFromNumber:[NSNumber numberWithDouble:self.area]], areaUnitString];
+    self.areaName = [NSString stringWithFormat:@"%@ %@", [formatter stringFromNumber:[NSNumber numberWithDouble:self.area]], areaUnitString];
+}
 
+- (IBAction)measure:(UISegmentedControl*)measureMethod {
+    
+    // Set the geometry of the sketch layer to match the selected geometry
+    if (measureMethod.selectedSegmentIndex == 0) {
+        self.sketchLayer.geometry = [[AGSMutablePolyline alloc] initWithSpatialReference:self.mapView.spatialReference];
+    }
+    else {
+        self.sketchLayer.geometry = [[AGSMutablePolygon alloc] initWithSpatialReference:self.mapView.spatialReference];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -173,6 +185,13 @@
 - (IBAction)resetBtnPressed:(id)sender {
     self.title = @"";
     [self.sketchLayer clear];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"doneSegue"]) {
+        self.areaName = self.title;
+    }
 }
 
 @end

@@ -15,7 +15,7 @@
 		2C79F749198EE5DC0089746C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C79F748198EE5DC0089746C /* AppDelegate.m */; };
 		2C79F74C198EE5DC0089746C /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C79F74A198EE5DC0089746C /* Main_iPhone.storyboard */; };
 		2C79F74F198EE5DC0089746C /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C79F74D198EE5DC0089746C /* Main_iPad.storyboard */; };
-		2C79F752198EE5DC0089746C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C79F751198EE5DC0089746C /* ViewController.m */; };
+		2C79F752198EE5DC0089746C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C79F751198EE5DC0089746C /* MapViewController.m */; };
 		2C79F754198EE5DC0089746C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C79F753198EE5DC0089746C /* Images.xcassets */; };
 		2C79F75B198EE5DC0089746C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C79F75A198EE5DC0089746C /* XCTest.framework */; };
 		2C79F75C198EE5DC0089746C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C79F738198EE5DC0089746C /* Foundation.framework */; };
@@ -25,6 +25,7 @@
 		2C79F771198EE76F0089746C /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C79F770198EE76F0089746C /* ArcGIS.bundle */; };
 		2C79F774198EF0AB0089746C /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 2C79F773198EF0AB0089746C /* index.html */; };
 		2C79F777198EF24D0089746C /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C79F776198EF24D0089746C /* WebViewController.m */; };
+		2CADAA8719916A7000CEFEA5 /* AreaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CADAA8619916A7000CEFEA5 /* AreaTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +51,8 @@
 		2C79F748198EE5DC0089746C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2C79F74B198EE5DC0089746C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		2C79F74E198EE5DC0089746C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		2C79F750198EE5DC0089746C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2C79F751198EE5DC0089746C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2C79F750198EE5DC0089746C /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		2C79F751198EE5DC0089746C /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		2C79F753198EE5DC0089746C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2C79F759198EE5DC0089746C /* ArcGIS SDK TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ArcGIS SDK TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C79F75A198EE5DC0089746C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -62,6 +63,8 @@
 		2C79F773198EF0AB0089746C /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		2C79F775198EF24D0089746C /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		2C79F776198EF24D0089746C /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		2CADAA8519916A7000CEFEA5 /* AreaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaTableViewController.h; sourceTree = "<group>"; };
+		2CADAA8619916A7000CEFEA5 /* AreaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,9 +129,11 @@
 				2C79F747198EE5DC0089746C /* AppDelegate.h */,
 				2C79F748198EE5DC0089746C /* AppDelegate.m */,
 				2C79F74A198EE5DC0089746C /* Main_iPhone.storyboard */,
+				2CADAA8519916A7000CEFEA5 /* AreaTableViewController.h */,
+				2CADAA8619916A7000CEFEA5 /* AreaTableViewController.m */,
 				2C79F74D198EE5DC0089746C /* Main_iPad.storyboard */,
-				2C79F750198EE5DC0089746C /* ViewController.h */,
-				2C79F751198EE5DC0089746C /* ViewController.m */,
+				2C79F750198EE5DC0089746C /* MapViewController.h */,
+				2C79F751198EE5DC0089746C /* MapViewController.m */,
 				2C79F753198EE5DC0089746C /* Images.xcassets */,
 				2C79F73F198EE5DC0089746C /* Supporting Files */,
 			);
@@ -274,7 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C79F752198EE5DC0089746C /* ViewController.m in Sources */,
+				2C79F752198EE5DC0089746C /* MapViewController.m in Sources */,
+				2CADAA8719916A7000CEFEA5 /* AreaTableViewController.m in Sources */,
 				2C79F749198EE5DC0089746C /* AppDelegate.m in Sources */,
 				2C79F745198EE5DC0089746C /* main.m in Sources */,
 				2C79F777198EF24D0089746C /* WebViewController.m in Sources */,

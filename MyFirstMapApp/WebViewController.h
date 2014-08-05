@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 City of Virginia Beach. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MapViewController.h"
 
-@interface WebViewController : ViewController
+@interface WebViewController : MapViewController
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @end

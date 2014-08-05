@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -17,34 +17,69 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3NP-FW-XcE" customClass="AGSMapView">
-                                <rect key="frame" x="0.0" y="66" width="320" height="414"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="372"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Axs-IG-vEn">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Reset" id="4bO-bQ-UW1">
+                                        <connections>
+                                            <action selector="resetBtnPressed:" destination="vXZ-lx-hvc" id="CAP-S9-hoc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="tVc-93-vTx">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="K3k-x8-Hz3">
+                                            <rect key="frame" x="71" y="8" width="161" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Line"/>
+                                                <segment title="Area"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="measure:" destination="vXZ-lx-hvc" eventType="valueChanged" id="fDj-R5-F6F"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="3NP-FW-XcE" secondAttribute="trailing" id="8RT-px-Cdl"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="3NP-FW-XcE" secondAttribute="bottom" id="Sq7-7v-PhQ"/>
-                            <constraint firstItem="3NP-FW-XcE" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="2" id="WQ2-XE-rfl"/>
-                            <constraint firstItem="3NP-FW-XcE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="veE-Tf-1Ox"/>
+                            <constraint firstItem="Axs-IG-vEn" firstAttribute="top" secondItem="3NP-FW-XcE" secondAttribute="bottom" id="43G-DS-lkX"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Axs-IG-vEn" secondAttribute="bottom" id="K6Y-ne-0FN"/>
+                            <constraint firstItem="Axs-IG-vEn" firstAttribute="top" secondItem="3NP-FW-XcE" secondAttribute="bottom" id="Kj0-Oe-eF8"/>
+                            <constraint firstItem="Axs-IG-vEn" firstAttribute="top" secondItem="3NP-FW-XcE" secondAttribute="bottom" id="LBj-My-MDS"/>
+                            <constraint firstItem="Axs-IG-vEn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Qmn-Bp-ziP"/>
+                            <constraint firstItem="3NP-FW-XcE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Tkk-cB-AhK"/>
+                            <constraint firstAttribute="trailing" secondItem="3NP-FW-XcE" secondAttribute="trailing" id="YmL-P7-gab"/>
+                            <constraint firstItem="3NP-FW-XcE" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="fXs-o3-Clu"/>
+                            <constraint firstAttribute="trailing" secondItem="Axs-IG-vEn" secondAttribute="trailing" id="pfq-E5-dnK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8ZI-hY-mKN">
-                        <barButtonItem key="rightBarButtonItem" title="Reset" id="YjA-ov-DNM">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="aMF-QT-9bZ">
                             <connections>
-                                <action selector="resetBtnPressed:" destination="vXZ-lx-hvc" id="E3f-AG-CPg"/>
+                                <segue destination="yak-Vd-RYM" kind="unwind" unwindAction="cancel:" id="hUT-Kb-WIW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="xM3-xY-4MA">
+                            <connections>
+                                <segue destination="yak-Vd-RYM" kind="unwind" unwindAction="done:" id="WKj-ij-u4b"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="3NP-FW-XcE" id="eOD-Lk-sLf"/>
-                        <outlet property="resetBtn" destination="YjA-ov-DNM" id="1Ia-OE-Go8"/>
+                        <outlet property="measureMethod" destination="K3k-x8-Hz3" id="Gnq-Ky-NPG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <exit id="yak-Vd-RYM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="397" y="-212"/>
+            <point key="canvasLocation" x="940" y="-70"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nnd-Ta-JoH">
@@ -73,18 +108,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuD-n5-Sxi">
-                                <rect key="frame" x="138" y="137" width="44" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Native">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="push" id="q7V-GO-Sqd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GE3-IA-xBL">
-                                <rect key="frame" x="145" y="269" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GE3-IA-xBL">
+                                <rect key="frame" x="145" y="263" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Web">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -93,13 +118,23 @@
                                     <segue destination="Xku-cI-sf5" kind="push" id="Vbr-an-f79"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3B-i7-sX3">
+                                <rect key="frame" x="125" y="225" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pass Data">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="okM-gE-WMB" kind="push" id="KWj-HR-FN6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JuD-n5-Sxi" firstAttribute="top" secondItem="Dmk-sP-pCc" secondAttribute="bottom" constant="73" id="7PH-Qg-iMH"/>
-                            <constraint firstAttribute="centerX" secondItem="GE3-IA-xBL" secondAttribute="centerX" id="Vya-uo-FPO"/>
-                            <constraint firstItem="GE3-IA-xBL" firstAttribute="top" secondItem="JuD-n5-Sxi" secondAttribute="bottom" constant="133" id="d22-1M-MYR"/>
-                            <constraint firstAttribute="centerX" secondItem="JuD-n5-Sxi" secondAttribute="centerX" id="sEy-5M-s4e"/>
+                            <constraint firstAttribute="centerX" secondItem="GE3-IA-xBL" secondAttribute="centerX" id="3mI-J0-yXX"/>
+                            <constraint firstItem="GE3-IA-xBL" firstAttribute="top" secondItem="k3B-i7-sX3" secondAttribute="bottom" constant="8" id="EIP-bs-oTL"/>
+                            <constraint firstAttribute="centerY" secondItem="k3B-i7-sX3" secondAttribute="centerY" id="sAo-4f-j4M"/>
+                            <constraint firstAttribute="centerX" secondItem="k3B-i7-sX3" secondAttribute="centerX" id="yNW-qw-ZNc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fjg-kh-soE"/>
@@ -107,6 +142,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kp-yQ-Zai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-103" y="159"/>
+        </scene>
+        <!--Area Table View Controller-->
+        <scene sceneID="Kg3-uo-jEY">
+            <objects>
+                <tableViewController id="okM-gE-WMB" customClass="AreaTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OAw-wk-8xi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AreaCell" id="dfk-G6-LKj">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dfk-G6-LKj" id="vr3-A5-VfX">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="okM-gE-WMB" id="xuw-0M-KIQ"/>
+                            <outlet property="delegate" destination="okM-gE-WMB" id="Mrp-ev-pIV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="1Vc-ax-NHo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="krY-sJ-MxK">
+                            <connections>
+                                <segue destination="vXZ-lx-hvc" kind="push" id="iiT-Pf-aba"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WVv-xc-0b6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="427" y="-70"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="4TC-Uw-MTH">
@@ -141,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEF-8j-29B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="397" y="482"/>
+            <point key="canvasLocation" x="427" y="533"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

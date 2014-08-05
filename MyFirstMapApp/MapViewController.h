@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <ArcGIS/ArcGIS.h>
 
-@interface ViewController : UIViewController <AGSMapViewLayerDelegate>
+@interface MapViewController : UIViewController <AGSMapViewLayerDelegate>
 @property (strong, nonatomic) IBOutlet AGSMapView *mapView;
 @property (nonatomic, strong) AGSSketchGraphicsLayer *sketchLayer;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *resetBtn;
+@property (strong, nonatomic) NSString *areaName;
+@property (nonatomic, strong) IBOutlet UISegmentedControl *measureMethod;
+
 - (IBAction)resetBtnPressed:(id)sender;
 
 @property (nonatomic, assign) double distance;
