@@ -26,14 +26,6 @@
     NSURL* url = [NSURL URLWithString:@"http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer"];
     AGSTiledMapServiceLayer *tiledLayer = [AGSTiledMapServiceLayer tiledMapServiceLayerWithURL:url];
     [self.mapView addMapLayer:tiledLayer withName:@"Basemap Tiled Layer"];
-
-    
-    AGSEnvelope *vbEnv = [AGSEnvelope envelopeWithXmin:-75.872749
-                                                     ymin:36.562283
-                                                     xmax:-76.240791
-                                                     ymax:36.923781
-                                         spatialReference:[AGSSpatialReference wgs84SpatialReference]];
-    [self.mapView zoomToEnvelope:vbEnv animated:YES];
     
     self.mapView.layerDelegate = self;
     
@@ -44,6 +36,13 @@
     self.areaUnit = AGSAreaUnitsAcres;
     
     self.resetBtn.enabled = false;
+    
+    AGSEnvelope *vbEnv = [AGSEnvelope envelopeWithXmin:-75.872749
+                                                  ymin:36.562283
+                                                  xmax:-76.240791
+                                                  ymax:36.923781
+                                      spatialReference:[AGSSpatialReference wgs84SpatialReference]];
+    [self.mapView zoomToEnvelope:vbEnv animated:YES];
 }
 
 - (void)mapViewDidLoad:(AGSMapView *) mapView {

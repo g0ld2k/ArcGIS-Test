@@ -13,16 +13,22 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3NP-FW-XcE" customClass="AGSMapView">
-                                <rect key="frame" x="0.0" y="66" width="320" height="502"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3NP-FW-XcE" customClass="AGSMapView">
+                                <rect key="frame" x="0.0" y="66" width="320" height="414"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3NP-FW-XcE" secondAttribute="trailing" id="8RT-px-Cdl"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="3NP-FW-XcE" secondAttribute="bottom" id="Sq7-7v-PhQ"/>
+                            <constraint firstItem="3NP-FW-XcE" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="2" id="WQ2-XE-rfl"/>
+                            <constraint firstItem="3NP-FW-XcE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="veE-Tf-1Ox"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8ZI-hY-mKN">
                         <barButtonItem key="rightBarButtonItem" title="Reset" id="YjA-ov-DNM">
@@ -64,10 +70,10 @@
                         <viewControllerLayoutGuide type="bottom" id="YwX-HB-Jpf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5dL-oo-Oao">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuD-n5-Sxi">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuD-n5-Sxi">
                                 <rect key="frame" x="138" y="137" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Native">
@@ -77,8 +83,8 @@
                                     <segue destination="vXZ-lx-hvc" kind="push" id="q7V-GO-Sqd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GE3-IA-xBL">
-                                <rect key="frame" x="136" y="300" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GE3-IA-xBL">
+                                <rect key="frame" x="145" y="269" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Web">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -89,6 +95,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JuD-n5-Sxi" firstAttribute="top" secondItem="Dmk-sP-pCc" secondAttribute="bottom" constant="73" id="7PH-Qg-iMH"/>
+                            <constraint firstAttribute="centerX" secondItem="GE3-IA-xBL" secondAttribute="centerX" id="Vya-uo-FPO"/>
+                            <constraint firstItem="GE3-IA-xBL" firstAttribute="top" secondItem="JuD-n5-Sxi" secondAttribute="bottom" constant="133" id="d22-1M-MYR"/>
+                            <constraint firstAttribute="centerX" secondItem="JuD-n5-Sxi" secondAttribute="centerX" id="sEy-5M-s4e"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fjg-kh-soE"/>
                 </viewController>
@@ -105,16 +117,22 @@
                         <viewControllerLayoutGuide type="bottom" id="MTZ-tN-vig"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ljj-iO-qIv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MEx-RV-EXE">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MEx-RV-EXE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MEx-RV-EXE" firstAttribute="top" secondItem="Ljj-iO-qIv" secondAttribute="top" id="B11-rx-xQn"/>
+                            <constraint firstAttribute="trailing" secondItem="MEx-RV-EXE" secondAttribute="trailing" id="FKm-kl-X43"/>
+                            <constraint firstItem="MEx-RV-EXE" firstAttribute="leading" secondItem="Ljj-iO-qIv" secondAttribute="leading" id="SKu-VQ-pAB"/>
+                            <constraint firstItem="MTZ-tN-vig" firstAttribute="top" secondItem="MEx-RV-EXE" secondAttribute="bottom" id="z3G-5M-rf6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="n6V-bO-0zQ"/>
                     <connections>
@@ -129,6 +147,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
