@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MyFirstMapApp.xcodeproj">
+      location = "self:ArcGIS SDK Test.xcodeproj">
    </FileRef>
 </Workspace>

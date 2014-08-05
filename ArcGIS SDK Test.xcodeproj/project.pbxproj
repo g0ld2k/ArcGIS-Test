@@ -38,14 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C79F735198EE5DC0089746C /* MyFirstMapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstMapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C79F735198EE5DC0089746C /* ArcGIS SDK Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ArcGIS SDK Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C79F738198EE5DC0089746C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2C79F73A198EE5DC0089746C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2C79F73C198EE5DC0089746C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		2C79F740198EE5DC0089746C /* MyFirstMapApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyFirstMapApp-Info.plist"; sourceTree = "<group>"; };
+		2C79F740198EE5DC0089746C /* ArcGIS SDK Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ArcGIS SDK Test-Info.plist"; sourceTree = "<group>"; };
 		2C79F742198EE5DC0089746C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C79F744198EE5DC0089746C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2C79F746198EE5DC0089746C /* MyFirstMapApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyFirstMapApp-Prefix.pch"; sourceTree = "<group>"; };
+		2C79F746198EE5DC0089746C /* ArcGIS SDK Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ArcGIS SDK Test-Prefix.pch"; sourceTree = "<group>"; };
 		2C79F747198EE5DC0089746C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C79F748198EE5DC0089746C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2C79F74B198EE5DC0089746C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -53,9 +53,9 @@
 		2C79F750198EE5DC0089746C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2C79F751198EE5DC0089746C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2C79F753198EE5DC0089746C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2C79F759198EE5DC0089746C /* MyFirstMapAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFirstMapAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C79F759198EE5DC0089746C /* ArcGIS SDK TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ArcGIS SDK TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C79F75A198EE5DC0089746C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		2C79F762198EE5DC0089746C /* MyFirstMapAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyFirstMapAppTests-Info.plist"; sourceTree = "<group>"; };
+		2C79F762198EE5DC0089746C /* ArcGIS SDK TestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ArcGIS SDK TestTests-Info.plist"; sourceTree = "<group>"; };
 		2C79F764198EE5DC0089746C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C79F766198EE5DC0089746C /* MyFirstMapAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFirstMapAppTests.m; sourceTree = "<group>"; };
 		2C79F770198EE76F0089746C /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArcGIS.bundle; path = ../../../Library/SDKs/ArcGIS/iOS/ArcGIS.framework/Versions/Current/Resources/ArcGIS.bundle; sourceTree = "<group>"; };
@@ -102,8 +102,8 @@
 		2C79F736198EE5DC0089746C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2C79F735198EE5DC0089746C /* MyFirstMapApp.app */,
-				2C79F759198EE5DC0089746C /* MyFirstMapAppTests.xctest */,
+				2C79F735198EE5DC0089746C /* ArcGIS SDK Test.app */,
+				2C79F759198EE5DC0089746C /* ArcGIS SDK TestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,10 +138,10 @@
 		2C79F73F198EE5DC0089746C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2C79F740198EE5DC0089746C /* MyFirstMapApp-Info.plist */,
+				2C79F740198EE5DC0089746C /* ArcGIS SDK Test-Info.plist */,
 				2C79F741198EE5DC0089746C /* InfoPlist.strings */,
 				2C79F744198EE5DC0089746C /* main.m */,
-				2C79F746198EE5DC0089746C /* MyFirstMapApp-Prefix.pch */,
+				2C79F746198EE5DC0089746C /* ArcGIS SDK Test-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -158,7 +158,7 @@
 		2C79F761198EE5DC0089746C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2C79F762198EE5DC0089746C /* MyFirstMapAppTests-Info.plist */,
+				2C79F762198EE5DC0089746C /* ArcGIS SDK TestTests-Info.plist */,
 				2C79F763198EE5DC0089746C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -177,9 +177,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2C79F734198EE5DC0089746C /* MyFirstMapApp */ = {
+		2C79F734198EE5DC0089746C /* ArcGIS SDK Test */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C79F76A198EE5DC0089746C /* Build configuration list for PBXNativeTarget "MyFirstMapApp" */;
+			buildConfigurationList = 2C79F76A198EE5DC0089746C /* Build configuration list for PBXNativeTarget "ArcGIS SDK Test" */;
 			buildPhases = (
 				2C79F731198EE5DC0089746C /* Sources */,
 				2C79F732198EE5DC0089746C /* Frameworks */,
@@ -189,14 +189,14 @@
 			);
 			dependencies = (
 			);
-			name = MyFirstMapApp;
+			name = "ArcGIS SDK Test";
 			productName = MyFirstMapApp;
-			productReference = 2C79F735198EE5DC0089746C /* MyFirstMapApp.app */;
+			productReference = 2C79F735198EE5DC0089746C /* ArcGIS SDK Test.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2C79F758198EE5DC0089746C /* MyFirstMapAppTests */ = {
+		2C79F758198EE5DC0089746C /* ArcGIS SDK TestTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C79F76D198EE5DC0089746C /* Build configuration list for PBXNativeTarget "MyFirstMapAppTests" */;
+			buildConfigurationList = 2C79F76D198EE5DC0089746C /* Build configuration list for PBXNativeTarget "ArcGIS SDK TestTests" */;
 			buildPhases = (
 				2C79F755198EE5DC0089746C /* Sources */,
 				2C79F756198EE5DC0089746C /* Frameworks */,
@@ -207,9 +207,9 @@
 			dependencies = (
 				2C79F75F198EE5DC0089746C /* PBXTargetDependency */,
 			);
-			name = MyFirstMapAppTests;
+			name = "ArcGIS SDK TestTests";
 			productName = MyFirstMapAppTests;
-			productReference = 2C79F759198EE5DC0089746C /* MyFirstMapAppTests.xctest */;
+			productReference = 2C79F759198EE5DC0089746C /* ArcGIS SDK TestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -226,7 +226,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2C79F730198EE5DC0089746C /* Build configuration list for PBXProject "MyFirstMapApp" */;
+			buildConfigurationList = 2C79F730198EE5DC0089746C /* Build configuration list for PBXProject "ArcGIS SDK Test" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -239,8 +239,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2C79F734198EE5DC0089746C /* MyFirstMapApp */,
-				2C79F758198EE5DC0089746C /* MyFirstMapAppTests */,
+				2C79F734198EE5DC0089746C /* ArcGIS SDK Test */,
+				2C79F758198EE5DC0089746C /* ArcGIS SDK TestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -294,7 +294,7 @@
 /* Begin PBXTargetDependency section */
 		2C79F75F198EE5DC0089746C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2C79F734198EE5DC0089746C /* MyFirstMapApp */;
+			target = 2C79F734198EE5DC0089746C /* ArcGIS SDK Test */;
 			targetProxy = 2C79F75E198EE5DC0089746C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -414,8 +414,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = "$(HOME)/Library/SDKs/ArcGIS/iOS/";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MyFirstMapApp/MyFirstMapApp-Prefix.pch";
-				INFOPLIST_FILE = "MyFirstMapApp/MyFirstMapApp-Info.plist";
+				GCC_PREFIX_HEADER = "MyFirstMapApp/ArcGIS SDK Test-Prefix.pch";
+				INFOPLIST_FILE = "MyFirstMapApp/ArcGIS SDK Test-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-framework",
@@ -423,7 +423,7 @@
 					"-l",
 					"c++",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "ArcGIS SDK Test";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -435,8 +435,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = "$(HOME)/Library/SDKs/ArcGIS/iOS/";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MyFirstMapApp/MyFirstMapApp-Prefix.pch";
-				INFOPLIST_FILE = "MyFirstMapApp/MyFirstMapApp-Info.plist";
+				GCC_PREFIX_HEADER = "MyFirstMapApp/ArcGIS SDK Test-Prefix.pch";
+				INFOPLIST_FILE = "MyFirstMapApp/ArcGIS SDK Test-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-framework",
@@ -444,7 +444,7 @@
 					"-l",
 					"c++",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "ArcGIS SDK Test";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -464,8 +464,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "MyFirstMapAppTests/MyFirstMapAppTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "MyFirstMapAppTests/ArcGIS SDK TestTests-Info.plist";
+				PRODUCT_NAME = "ArcGIS SDK TestTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -482,8 +482,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyFirstMapApp/MyFirstMapApp-Prefix.pch";
-				INFOPLIST_FILE = "MyFirstMapAppTests/MyFirstMapAppTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "MyFirstMapAppTests/ArcGIS SDK TestTests-Info.plist";
+				PRODUCT_NAME = "ArcGIS SDK TestTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -492,7 +492,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C79F730198EE5DC0089746C /* Build configuration list for PBXProject "MyFirstMapApp" */ = {
+		2C79F730198EE5DC0089746C /* Build configuration list for PBXProject "ArcGIS SDK Test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2C79F768198EE5DC0089746C /* Debug */,
@@ -501,7 +501,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C79F76A198EE5DC0089746C /* Build configuration list for PBXNativeTarget "MyFirstMapApp" */ = {
+		2C79F76A198EE5DC0089746C /* Build configuration list for PBXNativeTarget "ArcGIS SDK Test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2C79F76B198EE5DC0089746C /* Debug */,
@@ -510,7 +510,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C79F76D198EE5DC0089746C /* Build configuration list for PBXNativeTarget "MyFirstMapAppTests" */ = {
+		2C79F76D198EE5DC0089746C /* Build configuration list for PBXNativeTarget "ArcGIS SDK TestTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2C79F76E198EE5DC0089746C /* Debug */,
